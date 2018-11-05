@@ -370,18 +370,18 @@ var characters = [
 var clicks = 0;
 
 function gacha() {
-  var total_weight = 100,
-    random_number = Math.floor(Math.random() * (total_weight)),
+  var totalWeight = 100,
+    randomNumber = Math.floor(Math.random() * (totalWeight)),
     result = null;
 
   characters.some(function (item) {
-    if (random_number < item.rate) {
+    if (randomNumber < item.rate) {
       result = item;
 
       return true;
     }
 
-    random_number -= item.rate;
+    randomNumber -= item.rate;
   });
 
   return result;
